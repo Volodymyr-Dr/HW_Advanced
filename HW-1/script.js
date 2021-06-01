@@ -1,7 +1,7 @@
 //змінні
-let priceForCake = 15.678;
-let priceForWiskey = 123.965;
-let priceForSteak = 90.2345;
+const priceForCake = 15.678;
+const priceForWiskey = 123.965;
+const priceForSteak = 90.2345;
 
 //виведіть максимальне число
 let maxNumber = Math.max (priceForCake, priceForSteak, priceForWiskey);
@@ -28,7 +28,8 @@ let chekingSum = Math.floor (fullSum) % 2 == 0;
 console.log (chekingSum);
 
 //Виведіть суму решти, при оплаті всіх товарів (без округлення), якщо клієнт платить 500 грн.
-let remaiderSum = 500 - fullSum;
+let cash = 500;
+let remaiderSum = cash - fullSum;
 console.log (remaiderSum);
 
 //Виведіть середнє значення цін, округлене до другого знаку після коми

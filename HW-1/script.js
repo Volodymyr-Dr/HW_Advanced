@@ -16,8 +16,8 @@ let fullSum = (priceForCake + priceForSteak + priceForWiskey);
 console.log (fullSum);
 
 //Відкиньте копійки у всіх товарів, потім – складіть цілу частину вартості кожного товару між собою
-let sumWithoutPennise = Math.trunc (priceForCake) + Math.trunc (priceForSteak) + Math.trunc (priceForWiskey);
-console.log (sumWithoutPennise);
+let sumWithoutPennies = Math.trunc (priceForCake) + Math.trunc (priceForSteak) + Math.trunc (priceForWiskey);
+console.log (sumWithoutPennies);
 
 //Виведіть суму товарів округлену до сотень
 let roundSum = Math.round (fullSum/100) * 100;
@@ -55,7 +55,7 @@ document.getElementById("counter").innerHTML = `
     <li>Максимальна ціна: ${maxNumber};</li>
     <li>Мінімальна ціна: ${minNumber};</li>
     <li>Вартість всіх товарів: ${fullSum};</li>
-    <li>Вартість всіх товарів без копійок: ${sumWithoutPennise};</li>
+    <li>Вартість всіх товарів без копійок: ${sumWithoutPennies};</li>
     <li>Округлена сума: ${roundSum};</li>
     <li>Булеве значення: ${chekingSum};</li>
     <li>Сума решти: ${remaiderSum}</li>

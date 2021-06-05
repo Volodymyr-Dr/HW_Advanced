@@ -1,14 +1,12 @@
-let number1 = +prompt ("Напишіть число!)", 5);
+let number1;
 
-while (!Number.isInteger(number1)) {
-    number1 = +prompt("оуу shi.. має бути ціле число))");
-}
+do { number1 = +prompt("Придумайте число", '');
+} while (!Number.isInteger(number1) || isNaN(number1) || number1 == '');
 
-let number2 = +prompt ("Ще разок придумайте число", 'вік сина маминої подруги');
+let number2;
 
-while (!Number.isInteger(number2)) {
-    number2 = +prompt("ти знову?!..кажу ж, має бути ціле число))");
-}
+do { number2 = +prompt ("Ще разок, інше число", '');
+} while (!Number.isInteger(number2) || isNaN(number2) || number2 == '')
 
 let minNumber = Math.min (number1, number2);
 let maxNumber = Math.max (number1, number2);

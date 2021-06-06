@@ -1,3 +1,5 @@
+alert (`Зараз займемось математикою. Знайдемо загальну суму чисел від першого до другого числа.`)
+
 let number1;
 
 do { number1 = +prompt("Придумайте число", '');
@@ -18,4 +20,4 @@ for ( let i = minNumber; i <= maxNumber; i++) {
     if (question && i % 2 == 0) continue;
     sum += i;
 }
-alert (sum);
+alert (`Сума всіх чисел: ${sum}`);

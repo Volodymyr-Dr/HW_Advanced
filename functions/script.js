@@ -1,26 +1,29 @@
 // 1 Створити функцію getMaxDigit(number) – яка отримує будь-яке число 
 //та виводить найбільшу цифру в цьому числі.
 
-/* let number1;
-number1 = +prompt ('Введіть будь-яке число');
-
-function getMaxDigit (number1) {
+function askUserAboutNumber () {
+    
+    const number1 = +prompt (' Функція №1: буде шукати найбільшу цифру в числі. Введіть будь-яке число');
+   
+    function getMaxDigit () {
     if (number1 == 0) {
         return 0;
     } else {
-        return Math.max (number1 % 10, getMaxDigit(Math.floor(number1 / 10)));
+        return Math.max (number1 % 10);
     }
 }
-
-console.log (getMaxDigit(number1));
-alert (`Найбільша в ньому цифра: ${getMaxDigit(number1)}`);
- */
+    //console.log (getMaxDigit());
+    return getMaxDigit ();
+}
 
 // 2 Створити функцію, яка визначає ступінь числа. Використовуйте цикл.
-/* let N = +prompt("Число:");
-let pow = +prompt("Ступінь:");
 
-function getPowNumber (N, pow) {
+function askUserAboutPowNumber () {
+    
+    const N = +prompt("Функція №2: визначить ступінь числа. Ваше число:");
+    const pow = +prompt("Ступінь:");
+
+function getPowNumber () {
     let minus;
 
     if (pow < 0) minus = true;
@@ -31,43 +34,47 @@ function getPowNumber (N, pow) {
         nul *= N;
     } return minus ? 1 / nul : nul;
 }
+ //console.log (`${N}^${pow} = ${getPowNumber()}`);
+ return getPowNumber();
+}
  
-alert(`Число ${N} в ступені ${pow} = ${getPowNumber(N, pow)}`);
- */
 // 3 Створити функцію, яка форматує ім'я, роблячи першу букву великою. ("влад" -> "Влад", "вЛАД" -> "Влад" і так далі);
                  
-/* let myName = prompt (`Ваше ім'я`);
+function askUserName () {
 
-function getUpperLetter (myName) {
+const myName = prompt (`Функція №3: пропише Ваше ім'я з великої букви. Ваше ім'я?`);
+
+function getUpperLetter () {
     return myName[0].toUpperCase() + myName.toLowerCase(1);
     
 }
-console.log(getUpperLetter(myName))
-alert (`Дотримуйся граматики, пиши ім'я з великої букви! ${getUpperLetter(myName)}`); */
-
+//console.log(getUpperLetter())
+    return (getUpperLetter());
+}
 
 // 4 Створити функцію, яка вираховує суму, що залишається після оплати податку від зарабітньої плати.
 
-/* let salary = +prompt('Твоя зп?');
-let profit;
-let tax = 19.5;
+function askUserAboutSalary() {
 
-function showMyProfit () {
+const salary = +prompt('Функція №4: вирахує чисту зп, після сплати податку (19,5%). Ваше зп?');
+let profit;
+const tax = 19.5;
+
+function showMyProfit() {
     
     profit = salary - ((salary * tax) / 100);
     return profit;
 }
-showMyProfit();
-console.log(showMyProfit());
-alert (`Вкурсі, що податок ${tax}%, тому твій прибуток становить ${profit}UAH`); */
+ return showMyProfit();
+//console.log(showMyProfit(`Вкурсі, що податок ${tax}%, тому твій прибуток становить ${profit}UAH`));
+}
 
 // 5 Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M.
 
-/* let numb1 = +prompt('Напишіть число','');
-let numb2 = +prompt('Напишіть інше число','');
+function askUserAboutNumbers () {
 
-let minNumber;
-let maxNumber;
+const numb1 = +prompt('Функція №5: повертає випадкове ціле число в діапазоні.  Напишіть перше число','');
+const numb2 = +prompt('Напишіть інше число','');
 
 function getRndInteger (minNumber, maxNumber) {
     minNumber = Math.min (numb1, numb2);
@@ -75,15 +82,19 @@ function getRndInteger (minNumber, maxNumber) {
 
     return Math.floor(Math.random() * (maxNumber - minNumber + 1) ) + minNumber;
 }
-console.log(getRndInteger (minNumber, maxNumber));
-alert (`Рандомне число між обраними: ${getRndInteger (minNumber, maxNumber)}`) */
+//console.log(getRndInteger ());
+return getRndInteger();
+}
+
 
 // 6 Створити функцію, яка рахує скільки разів певна буква повторюється в слові.
 
-/* let word = prompt('Напишіть якесь цікаве слово');
-let letter = prompt('Напишіть букву, яку будемо шукати');
+function askUserWord () {
 
-function findLetter (word) {
+const word = prompt('Функція №6: рахує скільки разів певна буква повторюється в слові. Напишіть якесь цікаве слово');
+const letter = prompt('Напишіть букву, яку будемо шукати');
+
+function findLetter () {
     let count = 0;
     
     for ( let char of word.toLowerCase()) {
@@ -93,42 +104,119 @@ function findLetter (word) {
     }
     return count;
 }
-console.log(findLetter(word));
+//console.log(findLetter());
+return findLetter();
+}
 
-alert (`Ця буква зустрічається ${findLetter(word)} разів`); */
 
 // 7 Створіть функцію, яка конвертує долари в гривні та навпаки в залежності від наявності символа $ або UAH в рядку.
 
+
+function askUserAboutMoney () {
+    const yourMoney = +prompt('Фунція №7: конвертує долари в гривні та навпаки.  Сколько дєнєг ти пріньос?');
+    const currency = prompt ('Що саме будемо міняти?', 'UAH, $');
+
+    function convertMoney () {
+        
+        const formattedurrencyToUpperase = currency.toUpperCase();
+    
+        if (formattedurrencyToUpperase == 'UAH') {
+            return  +(yourMoney / 8).toFixed(2); 
+        } else  if (formattedurrencyToUpperase == '$' || 'USD') {
+            return +(yourMoney * 30).toFixed(2);
+        } else {
+            return 'У нас такого немає'
+        }
+    }
+    //console.log (convertMoney ());
+
+    return convertMoney (yourMoney, currency);
+
+}
 
 
 
 // 8 Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам.
 
-/* let len = +prompt('Яка довжина паролю?');
+function askUserAboutPassword () {
 
-function gen_password(len = 8){
-    var password = "";
-    var symbols = "0123456789";
-    for (var i = 0; i < len; i++){
+  len = +prompt('Фунція №8: генерує випадковий пароль.  Яка довжина паролю?');
+
+function genPassword(len = 8){
+    let password = "";
+    let symbols = "0123456789";
+    for (let i = 0; i < len; i++){
         password += symbols.charAt(Math.floor(Math.random() * symbols.length));     
     }
     return password;
 }
-console.log(gen_password(len));
-alert (`Ваш пароль: ${gen_password(len)}. Нікому не кажіть його!`) */
+//console.log(genPassword());
+return genPassword ();
+
+}
+
 
 // 9 Створіть функцію, яка видаляє всі букви з речення. 
 
-/* let yourString = prompt('Напишіть речення, над яким будете знущатись');
-let letter = prompt('Напишіть букву, якої хочете позбутись');
+function askUserString () {
 
-function deleteLetters (letter, yourString) {
+const yourString = prompt('Фунція №9: видаляє всі букви з речення.  Напишіть речення, над яким будете знущатись');
+const letter = prompt('Напишіть букву, якої хочете позбутись');
+
+function deleteLetters () {
     let result = yourString.split(`${letter}`).join('');
     return result;
 }
-console.log (deleteLetters (letter, yourString));
-alert (`Будь-ласка: ${deleteLetters (letter, yourString)}`);
- */
+//console.log (deleteLetters (letter, yourString));
+return deleteLetters();
+}
+
+
 
 // 10 Створіть функцію, яка перевіряє, чи є слово паліндромом.
 
+function askUserPalyndrom () {
+
+let youStr = prompt ('Фунція №10: перевіряє, чи є слово паліндромом. Яке слово хочете перевірити?');
+
+function isPalyndrom() {
+    youStr = youStr.toLowerCase().replace(/[^a-z0-9]+/g, '');
+    
+    if (youStr === youStr.split('').reverse().join('')) {
+        return 'Вітаю, це є паліндром';
+    } else{
+        return 'Нажаль, це не паліндром';
+    }
+  }
+
+//console.log (isPalyndrom (youStr));
+return isPalyndrom();
+}
+
+
+// 11 Створіть функцію, яка видалить з речення букви, які зустрічаються більше 1 разу.
+
+/* let str = prompt('Придумайте речення. Це вже в останнє))')
+
+function unique_letters() {
+    str = str.split('');
+    let res = str.filter(function(val, i, str) {
+    return str.lastIndexOf(val) === str.indexOf(val);
+        
+    });
+    return res;
+  }
+  console.log(unique_letters()); */
+
+
+ document.getElementById("1").innerHTML = `Найбільша цифра тут ${askUserAboutNumber ()}`;
+ document.getElementById("2").innerHTML = `${askUserAboutPowNumber()}`;
+ document.getElementById("3").innerHTML =`${askUserName()}`;
+ document.getElementById("4").innerHTML =`${askUserAboutSalary()}`;
+ document.getElementById("5").innerHTML =`${askUserAboutNumbers()}`;
+ document.getElementById("6").innerHTML =`${askUserWord ()}`;
+ document.getElementById("7").innerHTML =`${askUserAboutMoney ()}`;
+ document.getElementById("8").innerHTML =`${askUserAboutPassword ()}`;
+ document.getElementById("9").innerHTML =`${askUserString ()}`;
+ document.getElementById("10").innerHTML =`${askUserPalyndrom ()}`;
+ 

@@ -3,13 +3,18 @@
 
 function askUserAboutNumber () {
     
-    const number1 = +prompt (' Функція №1: буде шукати найбільшу цифру в числі. Введіть будь-яке число');
+    let number1;
    
+    while (!Number.isInteger(number1) || isNaN(number1) || number1 == '') {
+    number1 = +prompt (' Функція №1: буде шукати найбільшу цифру в числі. Введіть будь-яке ціле число.') ;
+}
+
     function getMaxDigit () {
-    if (number1 == 0) {
+    if (number1 == 0) { 
         return 0;
     } else {
-        return Math.max (number1 % 10);
+        number1 = number1.toString().split('');
+        return Math.max.apply (null, number1);
     }
 }
     //console.log (getMaxDigit());
@@ -135,25 +140,28 @@ function askUserAboutMoney () {
 }
 
 
-
 // 8 Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам.
 
 function askUserAboutPassword () {
+    
+    len = +prompt('Фунція №8: генерує випадковий пароль.  Яка довжина паролю?');
 
-  len = +prompt('Фунція №8: генерує випадковий пароль.  Яка довжина паролю?');
-
-function genPassword(len = 8){
-    let password = "";
-    let symbols = "0123456789";
-    for (let i = 0; i < len; i++){
-        password += symbols.charAt(Math.floor(Math.random() * symbols.length));     
+    if ( len == '' || isNaN(len)) {
+        len = 8;
     }
-    return password;
-}
-//console.log(genPassword());
-return genPassword ();
 
-}
+  function genPassword(){
+      let password = "";
+      let symbols = "0123456789";
+      for (let i = 0; i < len; i++){
+          password += symbols.charAt(Math.floor(Math.random() * symbols.length));     
+      }
+      return password;
+  }
+  //console.log(genPassword());
+  return genPassword ();
+  
+  }
 
 
 // 9 Створіть функцію, яка видаляє всі букви з речення. 
@@ -183,9 +191,9 @@ function isPalyndrom() {
     youStr = youStr.toLowerCase().replace(/[^a-z0-9]+/g, '');
     
     if (youStr === youStr.split('').reverse().join('')) {
-        return 'Вітаю, це є паліндром';
+        return 'Вітаю, це є паліндром.';
     } else{
-        return 'Нажаль, це не паліндром';
+        return 'Нажаль!';
     }
   }
 
@@ -207,16 +215,18 @@ function unique_letters() {
     return res;
   }
   console.log(unique_letters()); */
+      
+  
+  
 
-
- document.getElementById("1").innerHTML = `Найбільша цифра тут ${askUserAboutNumber ()}`;
- document.getElementById("2").innerHTML = `${askUserAboutPowNumber()}`;
- document.getElementById("3").innerHTML =`${askUserName()}`;
- document.getElementById("4").innerHTML =`${askUserAboutSalary()}`;
- document.getElementById("5").innerHTML =`${askUserAboutNumbers()}`;
- document.getElementById("6").innerHTML =`${askUserWord ()}`;
- document.getElementById("7").innerHTML =`${askUserAboutMoney ()}`;
- document.getElementById("8").innerHTML =`${askUserAboutPassword ()}`;
- document.getElementById("9").innerHTML =`${askUserString ()}`;
- document.getElementById("10").innerHTML =`${askUserPalyndrom ()}`;
+ document.getElementById("i1").innerHTML = `Найбільша цифра тут ${askUserAboutNumber ()}`;
+ document.getElementById("i2").innerHTML = `${askUserAboutPowNumber()}`;
+ document.getElementById("i3").innerHTML =`${askUserName()}`;
+ document.getElementById("i4").innerHTML =`${askUserAboutSalary()}`;
+ document.getElementById("i5").innerHTML =`${askUserAboutNumbers()}`;
+ document.getElementById("i6").innerHTML =`${askUserWord ()}`;
+ document.getElementById("i7").innerHTML =`${askUserAboutMoney ()}`;
+ document.getElementById("i8").innerHTML =`${askUserAboutPassword ()}`;
+ document.getElementById("i9").innerHTML =`${askUserString ()}`;
+ document.getElementById("i10").innerHTML =`${askUserPalyndrom ()}`;
  

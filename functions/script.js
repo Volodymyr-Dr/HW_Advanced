@@ -50,7 +50,7 @@ function askUserName () {
 const myName = prompt (`Функція №3: пропише Ваше ім'я з великої букви. Ваше ім'я?`);
 
 function getUpperLetter () {
-    return myName[0].toUpperCase() + myName.toLowerCase(1);
+    return myName[0].toUpperCase() + myName.substring(1).toLowerCase();
     
 }
 //console.log(getUpperLetter())

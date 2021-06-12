@@ -188,7 +188,7 @@ function askUserPalyndrom () {
 let youStr = prompt ('Фунція №10: перевіряє, чи є слово паліндромом. Яке слово хочете перевірити?');
 
 function isPalyndrom() {
-    youStr = youStr.toLowerCase().replace(/[^a-z0-9]+/g, '');
+    youStr = youStr.toLowerCase().replace(/[^a-zа-я0-9]+/g, '');
     
     if (youStr === youStr.split('').reverse().join('')) {
         return 'Вітаю, це є паліндром.';

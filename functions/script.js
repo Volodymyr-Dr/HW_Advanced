@@ -26,15 +26,15 @@ function askUserAboutNumber () {
 function askUserAboutPowNumber () {
     
     const N = +prompt("Функція №2: визначить ступінь числа. Ваше число:");
-    const pow = +prompt("Ступінь:");
+    const POW = +prompt("Ступінь:");
 
 function getPowNumber () {
     let minus;
 
-    if (pow < 0) minus = true;
+    if (POW < 0) minus = true;
 
     let result = 1;
-    let p = minus ? -pow : pow;
+    let p = minus ? -POW : POW;
     for ( let i = 1; i <= p; i++) {
         result *= N;
     } return minus ? 1 / result : result;
@@ -47,10 +47,10 @@ function getPowNumber () {
                  
 function askUserName () {
 
-const myName = prompt (`Функція №3: пропише Ваше ім'я з великої букви. Ваше ім'я?`);
+const MY_NAME = prompt (`Функція №3: пропише Ваше ім'я з великої букви. Ваше ім'я?`);
 
 function getUpperLetter () {
-    return myName[0].toUpperCase() + myName.substring(1).toLowerCase();
+    return MY_NAME[0].toUpperCase() + MY_NAME.substring(1).toLowerCase();
     
 }
 //console.log(getUpperLetter())
@@ -61,13 +61,13 @@ function getUpperLetter () {
 
 function askUserAboutSalary() {
 
-const salary = +prompt('Функція №4: вирахує чисту зп, після сплати податку (19,5%). Ваше зп?');
+const SALARY = +prompt('Функція №4: вирахує чисту зп, після сплати податку (19,5%). Ваше зп?');
 let profit;
 const tax = 19.5;
 
 function showMyProfit() {
     
-    profit = salary - ((salary * tax) / 100);
+    profit = SALARY - ((SALARY * tax) / 100);
     return profit;
 }
  return showMyProfit();
@@ -78,12 +78,12 @@ function showMyProfit() {
 
 function askUserAboutNumbers () {
 
-const numb1 = +prompt('Функція №5: повертає випадкове ціле число в діапазоні.  Напишіть перше число','');
-const numb2 = +prompt('Напишіть інше число','');
+const NUMB_1 = +prompt('Функція №5: повертає випадкове ціле число в діапазоні.  Напишіть перше число','');
+const NUMB_2 = +prompt('Напишіть інше число','');
 
 function getRndInteger (minNumber, maxNumber) {
-    minNumber = Math.min (numb1, numb2);
-    maxNumber = Math.max (numb1, numb2);
+    minNumber = Math.min (NUMB_1, NUMB_2);
+    maxNumber = Math.max (NUMB_1, NUMB_2);
 
     return Math.floor(Math.random() * (maxNumber - minNumber + 1) ) + minNumber;
 }
@@ -96,14 +96,14 @@ return getRndInteger();
 
 function askUserWord () {
 
-    const word = prompt('Функція №6: рахує скільки разів певна буква повторюється в слові. Напишіть якесь цікаве слово');
-    const letter = prompt('Напишіть букву, яку будемо шукати');
+    const WORD = prompt('Функція №6: рахує скільки разів певна буква повторюється в слові. Напишіть якесь цікаве слово');
+    const LETTER = prompt('Напишіть букву, яку будемо шукати');
     
     function findLetter () {
         let count = 0;
         
-        for ( let char of word.toLowerCase()) {
-            if (letter.toLowerCase().includes(char)) {
+        for ( let char of WORD.toLowerCase()) {
+            if (LETTER.toLowerCase().includes(char)) {
                 count += 1;
             }
         }
@@ -118,24 +118,24 @@ function askUserWord () {
 
 
 function askUserAboutMoney () {
-    const yourMoney = +prompt('Фунція №7: конвертує долари в гривні та навпаки.  Сколько дєнєг ти пріньос?');
-    const currency = prompt ('Що саме будемо міняти?', 'UAH, $');
+    const YOUR_MONEY = +prompt('Фунція №7: конвертує долари в гривні та навпаки.  Сколько дєнєг ти пріньос?');
+    const CURRENCY = prompt ('Що саме будемо міняти?', 'UAH, $');
 
     function convertMoney () {
         
-        const formattedurrencyToUpperase = currency.toUpperCase();
+        const FORMAT_CURRENCY_TO_UPPER_CASE = CURRENCY.toUpperCase();
     
-        if (formattedurrencyToUpperase === 'UAH') {
-            return  +(yourMoney / 8).toFixed(2); 
-        } else  if (formattedurrencyToUpperase === '$' || 'USD') {
-            return +(yourMoney * 30).toFixed(2);
+        if (FORMAT_CURRENCY_TO_UPPER_CASE === 'UAH') {
+            return  +(YOUR_MONEY / 8).toFixed(2); 
+        } else  if (FORMAT_CURRENCY_TO_UPPER_CASE === '$' || 'USD') {
+            return +(YOUR_MONEY * 30).toFixed(2);
         } else {
             return 'У нас такого немає'
         }
     }
     //console.log (convertMoney ());
 
-    return convertMoney (yourMoney, currency);
+    return convertMoney (YOUR_MONEY, CURRENCY);
 
 }
 
@@ -168,11 +168,11 @@ function askUserAboutPassword () {
 
 function askUserString () {
 
-const yourString = prompt('Фунція №9: видаляє всі букви з речення.  Напишіть речення, над яким будете знущатись');
-const letter = prompt('Напишіть букву, якої хочете позбутись');
+const YOUR_STRING = prompt('Фунція №9: видаляє всі букви з речення.  Напишіть речення, над яким будете знущатись');
+const LETTER = prompt('Напишіть букву, якої хочете позбутись');
 
 function deleteLetters () {
-    let result = yourString.split(`${letter}`).join('');
+    let result = YOUR_STRING.split(`${LETTER}`).join('');
     return result;
 }
 //console.log (deleteLetters (letter, yourString));

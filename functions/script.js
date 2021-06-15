@@ -5,12 +5,12 @@ function askUserAboutNumber () {
     
     let number1;
    
-    while (!Number.isInteger(number1) || isNaN(number1) || number1 == '') {
+    while (!Number.isInteger(number1) || isNaN(number1) || number1 === '') {
     number1 = +prompt (' Функція №1: буде шукати найбільшу цифру в числі. Введіть будь-яке ціле число.') ;
 }
 
     function getMaxDigit () {
-    if (number1 == 0) { 
+    if (number1 === 0) { 
         return 0;
     } else {
         number1 = number1.toString().split('');
@@ -33,11 +33,11 @@ function getPowNumber () {
 
     if (pow < 0) minus = true;
 
-    let nul = 1;
+    let result = 1;
     let p = minus ? -pow : pow;
     for ( let i = 1; i <= p; i++) {
-        nul *= N;
-    } return minus ? 1 / nul : nul;
+        result *= N;
+    } return minus ? 1 / result : result;
 }
  //console.log (`${N}^${pow} = ${getPowNumber()}`);
  return getPowNumber();
@@ -96,22 +96,22 @@ return getRndInteger();
 
 function askUserWord () {
 
-const word = prompt('Функція №6: рахує скільки разів певна буква повторюється в слові. Напишіть якесь цікаве слово');
-const letter = prompt('Напишіть букву, яку будемо шукати');
-
-function findLetter () {
-    let count = 0;
+    const word = prompt('Функція №6: рахує скільки разів певна буква повторюється в слові. Напишіть якесь цікаве слово');
+    const letter = prompt('Напишіть букву, яку будемо шукати');
     
-    for ( let char of word.toLowerCase()) {
-        if (letter.includes(char)) {
-            count += 1;
+    function findLetter () {
+        let count = 0;
+        
+        for ( let char of word.toLowerCase()) {
+            if (letter.toLowerCase().includes(char)) {
+                count += 1;
+            }
         }
+        return count;
     }
-    return count;
-}
-//console.log(findLetter());
-return findLetter();
-}
+    //console.log(findLetter());
+    return findLetter();
+    }
 
 
 // 7 Створіть функцію, яка конвертує долари в гривні та навпаки в залежності від наявності символа $ або UAH в рядку.
@@ -125,9 +125,9 @@ function askUserAboutMoney () {
         
         const formattedurrencyToUpperase = currency.toUpperCase();
     
-        if (formattedurrencyToUpperase == 'UAH') {
+        if (formattedurrencyToUpperase === 'UAH') {
             return  +(yourMoney / 8).toFixed(2); 
-        } else  if (formattedurrencyToUpperase == '$' || 'USD') {
+        } else  if (formattedurrencyToUpperase === '$' || 'USD') {
             return +(yourMoney * 30).toFixed(2);
         } else {
             return 'У нас такого немає'
@@ -144,16 +144,16 @@ function askUserAboutMoney () {
 
 function askUserAboutPassword () {
     
-    len = +prompt('Фунція №8: генерує випадковий пароль.  Яка довжина паролю?');
+    lengthPassword = +prompt('Фунція №8: генерує випадковий пароль.  Яка довжина паролю?');
 
-    if ( len == '' || isNaN(len)) {
-        len = 8;
+    if ( !lengthPassword || isNaN(lengthPassword)) {
+        lengthPassword = 8;
     }
 
   function genPassword(){
       let password = "";
       let symbols = "0123456789";
-      for (let i = 0; i < len; i++){
+      for (let i = 0; i < lengthPassword; i++){
           password += symbols.charAt(Math.floor(Math.random() * symbols.length));     
       }
       return password;
@@ -215,18 +215,17 @@ function unique_letters() {
     return res;
   }
   console.log(unique_letters()); */
-      
-  
+          
   
 
- document.getElementById("i1").innerHTML = `Найбільша цифра тут ${askUserAboutNumber ()}`;
- document.getElementById("i2").innerHTML = `${askUserAboutPowNumber()}`;
- document.getElementById("i3").innerHTML =`${askUserName()}`;
- document.getElementById("i4").innerHTML =`${askUserAboutSalary()}`;
- document.getElementById("i5").innerHTML =`${askUserAboutNumbers()}`;
- document.getElementById("i6").innerHTML =`${askUserWord ()}`;
- document.getElementById("i7").innerHTML =`${askUserAboutMoney ()}`;
- document.getElementById("i8").innerHTML =`${askUserAboutPassword ()}`;
- document.getElementById("i9").innerHTML =`${askUserString ()}`;
- document.getElementById("i10").innerHTML =`${askUserPalyndrom ()}`;
+document.getElementById("i1").innerHTML = `Найбільша цифра тут ${askUserAboutNumber ()}`;
+document.getElementById("i2").innerHTML = `${askUserAboutPowNumber()}`;
+document.getElementById("i3").innerHTML =`${askUserName()}`;
+document.getElementById("i4").innerHTML =`${askUserAboutSalary()}`;
+document.getElementById("i5").innerHTML =`${askUserAboutNumbers()}`;
+document.getElementById("i6").innerHTML =`${askUserWord ()}`;
+document.getElementById("i7").innerHTML =`${askUserAboutMoney ()}`;
+document.getElementById("i8").innerHTML =`${askUserAboutPassword ()}`;
+document.getElementById("i9").innerHTML =`${askUserString ()}`;
+document.getElementById("i10").innerHTML =`${askUserPalyndrom ()}`;
  

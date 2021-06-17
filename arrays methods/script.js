@@ -85,13 +85,26 @@ const getDividedByFive = dividedByFive.filter((item) => {
 });
 console.log(getDividedByFive);
 // 8. Створіть функцію replaceBadWords(string) – яка 1) розіб'є фразу на слова, 2) замінить погані слова на зірочки (*).
+let yourStr = "Are you fucking kidding? It's bullshit!"
 
-
+ const replaceBadWords = ((yourStr) => {
+    
+    return yourStr.replace(/fuck|shit/gi, "***");
+});
+console.log(replaceBadWords(yourStr));
 
 // 9. Створіть функцію divideByThree(word), яка розбиває кожне слово на умовні склади по 3 букви. Якщо букв менше трьох – не розбиває. 
 
+let yourStringe = "Commander dfvdf dfv";
+
+const divideByThree = (() => {
+    yourStringe = yourStringe.split(' ').join('').toLowerCase();
+    return yourStringe.match(/.{1,3}/g);
+});
+console.log(divideByThree());
 
 
 // 10. Створіть функцію generateCombinations(word), яка видасть всі можливі перестановки(унікальні, без повторень) букв в слові.
+
 
 

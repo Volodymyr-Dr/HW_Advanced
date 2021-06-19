@@ -1,17 +1,21 @@
 // 1. Створіть функцію getRandomArray(length, min, max) – яка повертає масив випадкових цілих чисел. 
 
-const getRandomArray = ((length, min, max) => {
-    length = 15;
+function askUserAboutLenght () {
+    const lengthArray = +prompt(`Яка довжина масиву потрібна?`, `Від 0 до 100`);
+
+
+const getRandomArray = (() => {
     min = 0;
-    max = 50;
+    max = 100;
     let randomArray = [];
-    for (let i = 0; i < length; i++) {
+    for (let i = 0; i < lengthArray; i++) {
         randomArray[i] = [Math.floor(Math.random() * (max - min + 1)) + min];
     }
     return randomArray.join().split();
 });
-console.log(getRandomArray());
-
+console.log('Випадкові числа:', getRandomArray());
+}
+askUserAboutLenght()
 // 2. Створіть функцію getModa(...numbers) – яка вираховує моду всіх переданих в неї аргументів.
 
 
@@ -29,7 +33,7 @@ const getAverage = () => {
     }, 0);
     return total /  numbers.length;  
 };
-console.log(getAverage());
+console.log(`Середнє арифметичне:`, getAverage());
 
 // 4. Створіть функцію getMedian(...numbers) – яка рахує медіану всіх переданих в неї аргументів. НЕЦІЛІ ЧИСЛА ІГНОРУЮТЬСЯ
  
@@ -56,52 +60,58 @@ function getMedian(yourSetOfNumbers) {
     }
     return yourSetOfNumbers[0];
 }
-console.log(getMedian(yourSetOfNumbers))
+console.log('Медіана:', getMedian(yourSetOfNumbers))
 
 // 5. Створіть функцію filterEvenNumbers(...numbers) – яка фільтрує парні числа передані як аргументи функції
 
 let allNumbers = [1, 2, 3, 4, 5, 6];
 
-const getEvenNumbers = allNumbers.filter((item, index, arr) => {
-    return !(item % 2 === 0);
-});
-console.log(getEvenNumbers);
+function getEvenNumbers () {
+    allNumbers = allNumbers.filter(item => !(item % 2 === 0) )
+    return allNumbers;
+}
+console.log('Масив непарних чисел:', getEvenNumbers());
 
 // 6. Створіть функцію countPositiveNumbers(...numbers) – яка порахує кількість чисел більших 0.
 
-let setOfNumbers = [1, -2, 3, -4, -5, 6];
+let setOfNumbers = [1, -2, 3, -4, -5, 6, 9];
 
-const positiveNumber = setOfNumbers.filter((item) => {
-    return item > 0;
-});
-console.log(positiveNumber);
+function positiveNumber() {
+    setOfNumbers = setOfNumbers.filter(item => item > 0);
+    return setOfNumbers.length;
+}
+console.log('Числа більші 0:', positiveNumber())
+
 
 // 7. Створіть функцію getDividedByFive(...numbers) – яка відфільтрує усі елементи в масиві та залишить тільки ті, які діляться на ціло на 5.
 
-let dividedByFive = [6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2];
+let dividedByFive = [6, 2, 55, 11, 25, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2];
 
-const getDividedByFive = dividedByFive.filter((item) => {
-    return item % 5 === 0;
-});
-console.log(getDividedByFive);
+function getDividedByFive() {
+    dividedByFive = dividedByFive.filter(item => item % 5 === 0)
+    return dividedByFive;
+};
+console.log('Діляться на ціло на 5:', getDividedByFive());
+
 // 8. Створіть функцію replaceBadWords(string) – яка 1) розіб'є фразу на слова, 2) замінить погані слова на зірочки (*).
 let yourStr = "Are you fucking kidding? It's bullshit!"
 
- const replaceBadWords = (yourStr) => {
+ const replaceBadWords = () => {
     
     return yourStr.replace(/fuck|shit/gi, "***");
 };
-console.log(replaceBadWords(yourStr));
+console.log(replaceBadWords());
 
 // 9. Створіть функцію divideByThree(word), яка розбиває кожне слово на умовні склади по 3 букви. Якщо букв менше трьох – не розбиває. 
 
-let yourStringe = "Commander Commander";
+let yourStringe = "Commander Command";
 
 const divideByThree = () => {
     yourStringe = yourStringe.split(' ').join('').toLowerCase();
     return yourStringe.match(/.{1,3}/g);
 };
 console.log(divideByThree());
+
 
 
 // 10. Створіть функцію generateCombinations(word), яка видасть всі можливі перестановки(унікальні, без повторень) букв в слові.

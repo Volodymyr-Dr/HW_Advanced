@@ -96,11 +96,14 @@ console.log('Діляться на ціло на 5:', getDividedByFive());
 // 8. Створіть функцію replaceBadWords(string) – яка 1) розіб'є фразу на слова, 2) замінить погані слова на зірочки (*).
 let yourStr = "Are you fucking kidding? It's bullshit!"
 
- const replaceBadWords = () => {
+const badWords = /fuck|shit/g;
+const replaceBadWords = (badWords) => {
     
-    return yourStr.replace(/fuck|shit/gi, "***");
+    return yourStr.replace(badWords, "***");
 };
-console.log(replaceBadWords());
+console.log(replaceBadWords(badWords));
+
+
 
 // 9. Створіть функцію divideByThree(word), яка розбиває кожне слово на умовні склади по 3 букви. Якщо букв менше трьох – не розбиває. 
 

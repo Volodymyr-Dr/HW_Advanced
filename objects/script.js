@@ -31,14 +31,14 @@ const students = [{
   const arrWithSubjects = students.map((student) =>    {
     const subjects = Object.keys(student.subjects);
     const formattedSubjects = subjects.map((subject) => {
-      subject = subject.replace(/_/g, " ");
-      subject = subject.charAt(0).toUpperCase() + subject.substring(1).toLowerCase();
-      return subject;
+      let changedSubject = subject.replace(/_/g, " ");
+      changedSubject = subject.charAt(0).toUpperCase() + subject.substring(1).toLowerCase();
+      return changedSubject;
     });
 
-    return {name: student.name, subjects: formattedSubjects};
+    return formattedSubjects;
 });
-console.log(arrWithSubjects[1]);
+console.log(arrWithSubjects);
 
 // 2. Створіть функцію getAverageMark(students[0]) --> 3.79 – яка поверне середню оцінку по усім предметам для переданого студента НЕ МАСИВА СТУДЕНТІВ.
 //  Оцінку округліть до 2ого знаку. 
@@ -49,7 +49,7 @@ const averageMark = students.map( student =>  {
   const total = allMarks.reduce((total, mark)  => {
     return total + Number(mark);
   }, 0);
-  return {name: student.name, average_mark: +(total / allMarks.length).toFixed(2)};
+  return +(total / allMarks.length).toFixed(2);
 });
 console.log(averageMark)
 
@@ -58,11 +58,23 @@ console.log(averageMark)
 // ПОвинна бути виведена інформація: курс, ім'я, середня оцінка.
 
 const arrInfo = students.map(student =>    {
-  const studInfo = Object.entries(student);
-  return studInfo 
-});
-console.log(arrInfo)
+  const studInfo = Object.entries(student).splice(0, 2).join(',').split (',');
+  return studInfo
+}); 
 
+function getStudentInfo() {
+  let studentInfo = {};
+  for ( let i = 0; i < arrInfo.length; i++ ) {
+    studentInfo[arrInfo[i]] =+ averageMark[i]; 
+  }
+  return Object.entries(studentInfo);
+}
+console.log(getStudentInfo())
+
+
+
+
+ 
 // 4.Ствроіть функцію getStudentsNames(students) --> ["Anton", "Tanya, "Victor"] – яка повертає імена студентів у алфавітному порядку.
 
 const getStudentsNames = students.map( student => {

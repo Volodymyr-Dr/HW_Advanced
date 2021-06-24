@@ -58,8 +58,8 @@ console.log(averageMark)
 // ПОвинна бути виведена інформація: курс, ім'я, середня оцінка.
 
 const arrInfo = students.map(student =>    {
-  const studInfo = Object.entries(student).splice(0, 2).join(',').split (',');
-  return studInfo
+  const studInfo = Object.entries(student).splice(0, 2);
+  return studInfo;
 }); 
 
 function getStudentInfo() {
@@ -86,26 +86,23 @@ console.log(getStudentsNames.sort())
 
 // 5. Створіть функцію getBestStudent(students) --> "Anton" – яка повертає кращого студента зі списку по показнику середньої оцінки.
 
-
 const marksStudents = averageMark.map( mark => {
   const onlyMark = Object.values(mark);
-  return onlyMark[1]
+  return onlyMark
 }); function getMaxOfArray(marksStudents) {
-  return  Math.max.apply(null, marksStudents);
+  return  Math.max(...marksStudents);
 }
-
 console.log(getMaxOfArray(marksStudents))
 
 // 6. Створіть функцію calculateWordLetters("тест") --> { "т": 2, "е": 1, "с": 1 } – яка повертає обє'кт, в якому ключі це букви у слові, а значення – кількість їх повторень.
 const word = 'тест';
 
-const calculateWordLetters = (word) => {
-  const changedWord = word.split(" ").join("");
+const calculateWordLetters = (...word) => {
   const lettersCount = {}
-  for (let i = 0; i < changedWord.length; i++) {
-      lettersCount[changedWord[i]] ? lettersCount[changedWord[i]] += 1 : lettersCount[changedWord[i]] = 1
+  for (let i = 0; i < word.length; i++) {
+      lettersCount[word[i]] ? lettersCount[word[i]] += 1 : lettersCount[word[i]] = 1
   }
   return lettersCount;
   
 }
-console.log(calculateWordLetters(word))
+console.log(calculateWordLetters(...word));

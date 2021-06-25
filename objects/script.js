@@ -27,7 +27,8 @@ const students = [{
 
 // 1. Створіть функцію getSubjects(students[0] --> ["Math", "Algorithms", "Data science"] - яка повертає список предметів для конкретного студента. 
 //    Зверніть увагу – назву предмету необхідно повертати з великої літери, а _ – замінити на пробіл
-
+  
+function getSubjects () {
   const arrWithSubjects = students.map((student) =>    {
     const subjects = Object.keys(student.subjects);
     const formattedSubjects = subjects.map((subject) => {
@@ -38,20 +39,24 @@ const students = [{
 
     return formattedSubjects;
 });
-console.log(arrWithSubjects);
+return arrWithSubjects;
+  }
+  console.log(getSubjects())
 
 // 2. Створіть функцію getAverageMark(students[0]) --> 3.79 – яка поверне середню оцінку по усім предметам для переданого студента НЕ МАСИВА СТУДЕНТІВ.
 //  Оцінку округліть до 2ого знаку. 
 
-
-const averageMark = students.map( student =>  {
+function getAverageMark () {
+  const averageMark = students.map( student =>  {
   const allMarks = Object.values(student.subjects).join(',').split (',');
   const total = allMarks.reduce((total, mark)  => {
     return total + Number(mark);
   }, 0);
   return +(total / allMarks.length).toFixed(2);
 });
-console.log(averageMark)
+return averageMark;
+}
+console.log(getAverageMark())
 
 // 3. Створіть функцію getStudentInfo(students[0]) --> { "course": 3, "name": "Tanya", "averageMark": 3.79} –
 //  яка повертає інформацію загального виду по переданому студенту (вам знадобиться функція з попереднього завдання). 
@@ -60,12 +65,12 @@ console.log(averageMark)
 const arrInfo = students.map(student =>    {
   const studInfo = Object.entries(student).splice(0, 2);
   return studInfo;
-}); 
+}); console.log(arrInfo)
 
 function getStudentInfo() {
   let studentInfo = {};
   for ( let i = 0; i < arrInfo.length; i++ ) {
-    studentInfo[arrInfo[i]] =+ averageMark[i]; 
+    studentInfo[arrInfo[i]] =+ getAverageMark()[i]; 
   }
   return Object.entries(studentInfo);
 }
@@ -77,19 +82,23 @@ console.log(getStudentInfo())
  
 // 4.Ствроіть функцію getStudentsNames(students) --> ["Anton", "Tanya, "Victor"] – яка повертає імена студентів у алфавітному порядку.
 
-const getStudentsNames = students.map( student => {
+ function getStudentsNames () {
+  const arrStudent =  students.map( student => {
   const studentsName = Object.values(student.name).join('');
 
   return studentsName;
 });
-console.log(getStudentsNames.sort())
+  return arrStudent.sort();
+}
+console.log(getStudentsNames())
 
 // 5. Створіть функцію getBestStudent(students) --> "Anton" – яка повертає кращого студента зі списку по показнику середньої оцінки.
 
-const marksStudents = averageMark.map( mark => {
+const marksStudents = getAverageMark().map( mark => {
   const onlyMark = Object.values(mark);
   return onlyMark
-}); function getMaxOfArray(marksStudents) {
+}); 
+function getMaxOfArray(marksStudents) {
   return  Math.max(...marksStudents);
 }
 console.log(getMaxOfArray(marksStudents))

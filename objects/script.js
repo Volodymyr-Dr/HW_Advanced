@@ -33,7 +33,7 @@ function getSubjects () {
     const subjects = Object.keys(student.subjects);
     const formattedSubjects = subjects.map((subject) => {
       let changedSubject = subject.replace(/_/g, " ");
-      changedSubject = changedSubject.charAt(0).toUpperCase() + subject.substring(1).toLowerCase();
+      changedSubject = changedSubject.charAt(0).toUpperCase() + changedSubject.substring(1).toLowerCase();
       return changedSubject;
     });
 

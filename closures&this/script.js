@@ -45,11 +45,14 @@ function getMySalary(country) {
     const maxSalary = 2000;
     const minSalary = 1500;
     const salary =  Math.floor(Math.random() * (maxSalary - minSalary)) + minSalary;
+    const taxes = this.tax * salary;
     const profit = +(salary - (salary * this.tax)).toFixed(2);
     
-    console.log(`${country}:`, {salary: salary, taxes: this.tax, profit: profit});
+    console.log(`${country}:`, {salary: salary, taxes: taxes, profit: profit});
     
 };
+
+getMySalary.call(ukraine ,'Україна');
 
 let timerId = setTimeout(function getCountry() {
     getMySalary.call(ukraine ,'Україна');

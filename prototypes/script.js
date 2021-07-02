@@ -63,22 +63,24 @@ console.log('Бали:' ,ostap.getMarks);
 
 class BudgetStudent extends Student {
     constructor (university, course, fullName, marks) {
-        super(university, course, fullName, marks )
+        super(university, course, fullName, marks)
+        this.stipend = 1400;
+        setInterval(() => console.log(this.getScholarship()), 30000);
         
-        
-        setInterval(() => this.getScholarship(), 30000);
     }
     getScholarship(stipend) {
-        if (this.getAverageMark() >= 4) {
-            return `Ви отримали ${stipend}грн. стипендії`
+        if (super.getAverageMark() >= 4 || !this.dismissed) {
+            return `Ви отримали ${this.stipend}грн. стипендії`
         }
         else {
             return `Цього семестру без стипендії!`
         }
     }
+    
 }
 
 const volodymyr = new BudgetStudent("Вищої Школи Психотерапії м.Одеса", "3", "Павлик Володимир Сергійович", [4, 5, 4, 4, 5]);
 
-console.log(volodymyr.getScholarship(1400))
+console.log(volodymyr.getScholarship())
+
 

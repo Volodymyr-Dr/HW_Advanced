@@ -11,14 +11,14 @@ class Student {
     }
 
     get getMarks() {
-        if (this.dismissed === true) {
+        if (this.dismissed) {
             return null;
         }
         return this.marks;
     }
 
     set setMarks(mark) {
-        if (this.dismissed === true) {
+        if (this.dismissed) {
             return null;
         }
         return this.marks.push(mark);

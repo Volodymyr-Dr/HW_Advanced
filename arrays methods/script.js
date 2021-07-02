@@ -16,6 +16,9 @@ const getRandomArray = (() => {
 console.log('Випадкові числа:', getRandomArray());
 }
 askUserAboutLenght()
+
+
+
 // 2. Створіть функцію getModa(...numbers) – яка вираховує моду всіх переданих в неї аргументів.
 
 
@@ -99,7 +102,7 @@ let yourStr = "Are you fucking kidding? It's bullshit!"
 const badWords = /fuck|shit/g;
 const replaceBadWords = (badWords) => {
     
-    return yourStr.replace(badWords, "***");
+    return yourStr.replaceAll(badWords, "***");
 };
 console.log(replaceBadWords(badWords));
 

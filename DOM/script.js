@@ -1,5 +1,5 @@
 
-const generateBlocksInterval = () => {
+const generateRandomColor = () => {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
@@ -11,7 +11,7 @@ const generateBlocks = () =>  {
     
     for (let i = 0; i < 25; i++) {
         const square = document.createElement('div')
-        square.style.background = generateBlocksInterval()
+        square.style.background = generateRandomColor()
         
         document.body.prepend(square)
     }   
@@ -19,15 +19,15 @@ const generateBlocks = () =>  {
 generateBlocks()
 
 
-const getQuerySelector = () => {
+const getAnotherColor = () => {
     const boxex = document.querySelectorAll('div')
     for ( let box of boxex ) {
-        box.style.background = generateBlocksInterval()
+        box.style.background = generateRandomColor()
     }    
 }
 
 setInterval(() => { 
-    getQuerySelector()
+    getAnotherColor()
 }, 1000); 
 
 

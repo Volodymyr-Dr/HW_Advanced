@@ -2,8 +2,7 @@
 
 function askUserAboutLenght () {
     const lengthArray = +prompt(`Яка довжина масиву потрібна?`, `Від 0 до 100`);
-
-
+    
 const getRandomArray = (() => {
     min = 0;
     max = 100;
@@ -19,6 +18,7 @@ askUserAboutLenght()
 
 
 
+
 // 2. Створіть функцію getModa(...numbers) – яка вираховує моду всіх переданих в неї аргументів.
 
 
@@ -28,13 +28,9 @@ askUserAboutLenght()
 let numbers = [6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2];
 
 const getAverage = () => {
-    numbers.filter((item) => {
-        return (Number.isInteger(item) || !item);
-    });
-    const total = numbers.reduce((total, number) => {
-        return total + number;
-    }, 0);
-    return total /  numbers.length;  
+    const filterNumbers =  numbers.filter ((item) =>  (Number.isInteger(item) || !item));
+    const total = filterNumbers.reduce((total, number) =>  total + number) / filterNumbers.length;
+    return total
 };
 console.log(`Середнє арифметичне:`, getAverage());
 
@@ -69,20 +65,16 @@ console.log('Медіана:', getMedian(yourSetOfNumbers))
 
 let allNumbers = [1, 2, 3, 4, 5, 6];
 
-function getEvenNumbers () {
-    allNumbers = allNumbers.filter(item => !(item % 2 === 0) )
-    return allNumbers;
-}
+const getEvenNumbers = () => allNumbers.filter(item => !(item % 2 === 0));
+    
 console.log('Масив непарних чисел:', getEvenNumbers());
 
 // 6. Створіть функцію countPositiveNumbers(...numbers) – яка порахує кількість чисел більших 0.
 
 let setOfNumbers = [1, -2, 3, -4, -5, 6, 9];
 
-function positiveNumber() {
-    setOfNumbers = setOfNumbers.filter(item => item > 0);
-    return setOfNumbers.length;
-}
+const positiveNumber = () => setOfNumbers.filter(item => item > 0);
+
 console.log('Числа більші 0:', positiveNumber())
 
 
@@ -90,10 +82,8 @@ console.log('Числа більші 0:', positiveNumber())
 
 let dividedByFive = [6, 2, 55, 11, 25, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2];
 
-function getDividedByFive() {
-    dividedByFive = dividedByFive.filter(item => item % 5 === 0)
-    return dividedByFive;
-};
+const getDividedByFive = () => dividedByFive.filter(item => item % 5 === 0);
+
 console.log('Діляться на ціло на 5:', getDividedByFive());
 
 // 8. Створіть функцію replaceBadWords(string) – яка 1) розіб'є фразу на слова, 2) замінить погані слова на зірочки (*).

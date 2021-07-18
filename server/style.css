@@ -1,0 +1,48 @@
+body {
+    font-family: 'Tourney', cursive;
+    background-image: url(./img/thumb-1920-384054.jpeg);
+    background-attachment: fixed;
+    font-size: 20px;
+    text-shadow: -4px 4px 13px #3feafb;
+}
+#title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+.page1 {
+    color: aqua;
+}
+.page2 {
+    color: salmon;
+}
+#characters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+}
+img {
+
+    width: auto;
+    height: 200px;
+    border-radius: 20%;
+}
+.planet {
+    border-radius: 50%;
+}
+#planets {
+    display: flex;
+    flex-wrap: wrap;
+}
+span{
+    text-align: center;
+    width: 190px;
+    border-radius: 20%;
+    padding: 20px;
+    margin: 10px;
+    font-size: 22px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+}

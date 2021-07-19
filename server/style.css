@@ -46,3 +46,27 @@ span{
     flex-wrap: wrap-reverse;
     justify-content: center;
 }
+#arrow {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    margin: 0 auto;
+    font-size: 40px;
+}
+#arrowLeft {
+    cursor: pointer;
+}
+#arrowRight {
+    cursor: pointer;
+}
+button {
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 30px;
+}   
+
+input {
+    margin-left: 30px;
+    width: 175px;
+    outline: none;
+}

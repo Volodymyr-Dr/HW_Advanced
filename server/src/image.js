@@ -1,75 +1,75 @@
 
 const images = [{
     name: "Luke Skywalker",
-    image: `<img src="./characters/Luke-rotjpromo.jpeg" alt="">`,
+    image: `<img src="../characters/Luke-rotjpromo.jpeg" alt="">`,
 },
 {
     name: "C-3PO",
-    image: `<img src="./characters/C-3PO_EP3.png" alt="">`,
+    image: `<img src="../characters/C-3PO_EP3.png" alt="">`,
 },
 {
     name: "R2-D2",
-    image: `<img src="./characters/r2.png" alt="">`,
+    image: `<img src="../characters/r2.png" alt="">`,
 },
 {
     name: "Darth Vader",
-    image: `<img src="./characters/newsimg78438.jpeg" alt="">`,
+    image: `<img src="../characters/newsimg78438.jpeg" alt="">`,
 },
 {
     name: "Leia Organa",
-    image: `<img src="./characters/star-wars-leia.jpeg" alt="">`,
+    image: `<img src="../characters/star-wars-leia.jpeg" alt="">`,
 },
 {
     name: "Owen Lars",
-    image: `<img src="./characters/Owen-OP.jpeg" alt="">`,
+    image: `<img src="../characters/Owen-OP.jpeg" alt="">`,
 },
 {
     name: "Beru Whitesun lars",
-    image: `<img src="./characters/Beru_Lars_002.jpeg" alt="">`,
+    image: `<img src="../characters/Beru_Lars_002.jpeg" alt="">`,
 },
 {
     name: "R5-D4",
-    image: `<img src="./characters/R5-D4_Sideshow.png" alt="">`,
+    image: `<img src="../characters/R5-D4_Sideshow.png" alt="">`,
 },
 {
     name: "Biggs Darklighter",
-    image: `<img src="./characters/BiggsHS-ANH.png" alt="">`,
+    image: `<img src="../characters/BiggsHS-ANH.png" alt="">`,
 },
 {
     name: "Obi-Wan Kenobi",
-    image: `<img src="./characters/010_A7A08C89_416.jpeg" alt="">`
+    image: `<img src="../characters/010_A7A08C89_416.jpeg" alt="">`
 },
 {
     name: "Wilhuff Tarkin",
-    image: `<img src="./characters/Tarkininfobox.jpeg" alt="">`,
+    image: `<img src="../characters/Tarkininfobox.jpeg" alt="">`,
 },
 {
     name: "Chewbacca",
-    image: `<img src="./characters/9084590.jpeg" alt="">`,
+    image: `<img src="../characters/9084590.jpeg" alt="">`,
 },
 {
     name: "Han Solo",
-    image: `<img src="./characters/HanSolo.jpeg" alt="">`,
+    image: `<img src="../characters/HanSolo.jpeg" alt="">`,
 },
 {
     name: "Greedo",
-    image: `<img src="./characters/Greedo.jpeg" alt="">`,
+    image: `<img src="../characters/Greedo.jpeg" alt="">`,
 },
 {
     name: "Jabba Desilijic Tiure",
-    image: `<img src="./characters/Hutt.jpeg" alt="">`,
+    image: `<img src="../characters/Hutt.jpeg" alt="">`,
 },
 {
     name: "Wedge Antilles",
-    image: `<img src="./characters/WedgesEntireHead-ROTJ.png" alt="">`,
+    image: `<img src="../characters/WedgesEntireHead-ROTJ.png" alt="">`,
 },
 {
     name: "Jek Tono Porkins",
-    image: `<img src="./characters/JekPorkins-DB.png" alt="">`,
+    image: `<img src="../characters/JekPorkins-DB.png" alt="">`,
 },
 {
     name: "Raymus Antilles",
-    image: `<img src="./characters/Antilles-SWE.png" alt="">`,
+    image: `<img src="../characters/Antilles-SWE.png" alt="">`,
 },
 {
     name: "Yoda",

@@ -184,41 +184,41 @@ const images = [{
 
 const planetObj = [{
     planet: "Tatooine",
-    image: `<img  class="planet" src="https://static.wikia.nocookie.net/swtor/images/7/7f/Tatooine.jpg/revision/latest?cb=20190412125545&path-prefix=ru" alt=""></img>`,
+    image: `<img  class="planet" src="../img_planets/Tatooine.jpeg" alt=""></img>`,
 },
 {
     planet: "Alderaan",
-    image: `<img class="planet" src="https://oyster.ignimgs.com/mediawiki/apis.ign.com/star-wars-episode-7/4/4a/Alderaan.jpg?width=960" alt=""></img>`,
+    image: `<img class="planet" src="../img_planets/Alderaan.jpeg" alt=""></img>`,
 },
 {
     planet: "Yavin IV",
-    image: `<img class="planet" src="https://static.wikia.nocookie.net/starwars/images/9/99/Yavin-Battlefront.png/revision/latest?cb=20170911200018" alt=""></img>`,
+    image: `<img class="planet" src="../img_planets/Yavin.png" alt=""></img>`,
 },
 {
     planet: "Hoth",
-    image: `<img class="planet" src="https://static.wikia.nocookie.net/rustarwars/images/8/81/Hoth_AoRCR.png/revision/latest?cb=20180110123742" alt=""></img>`,
+    image: `<img class="planet" src="../img_planets/Hoth.png" alt=""></img>`,
 },
 {
     planet: "Dagobah",
-    image: `<img class="planet" src="https://static.wikia.nocookie.net/starwars/images/4/48/Dagobah_ep3.jpg/revision/latest?cb=20100122163146" alt=""></img>`,
+    image: `<img class="planet" src="../img_planets/Dagobah.jpeg" alt=""></img>`,
 },
 {
     planet: "Bespin",
-    image: `<img class="planet" src="https://static.wikia.nocookie.net/rustarwars/images/7/79/Bestine_TEA.png/revision/latest?cb=20180326092431" alt=""></img>`,
+    image: `<img class="planet" src="../img_planets/Bestine.png" alt=""></img>`,
 },
 {
     planet: "Endor",
-    image: `<img class="planet" src="https://oyster.ignimgs.com/mediawiki/apis.ign.com/star-wars-episode-7/2/20/Endor1.jpg?width=960" alt=""></img>`,
+    image: `<img class="planet" src="../img_planets/Endor1.jpeg" alt=""></img>`,
 },
 {
     planet: "Naboo",
-    image: `<img class="planet" src="https://static.wikia.nocookie.net/starwars/images/f/f0/Naboo_planet.png/revision/latest?cb=20190210065915" alt=""></img>`
+    image: `<img class="planet" src="../img_planets/Naboo.png" alt=""></img>`
 },
 {
     planet: "Coruscant",
-    image: `<img class="planet" src="https://static.wikia.nocookie.net/starwars/images/8/84/CoruscantGlobeE1.png/revision/latest?cb=20130123002137" alt=""></img>`
+    image: `<img class="planet" src="../img_planets/Coruscant.png" alt=""></img>`
 },
 {
     planet: "Kamino",
-    image: `<img class="planet" src="https://static.wikia.nocookie.net/rustarwars/images/5/57/Kamino.jpg/revision/latest?cb=20081121172604" alt=""></img>`,
+    image: `<img class="planet" src="../img_planets/Kamino.jpeg" alt=""></img>`,
 }]

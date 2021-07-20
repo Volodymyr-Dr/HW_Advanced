@@ -73,11 +73,11 @@ const images = [{
 },
 {
     name: "Yoda",
-    image: `<img src="https://static.wikia.nocookie.net/rustarwars/images/d/d6/Yoda_SWSB.png/revision/latest?cb=20171222112613" alt="">`,
+    image: `<img src="https://static.wikia.nocookie.net/rustarwars/images/d/d6/Yoda_SWSB.png" alt="">`,
 },
 {
     name: "Palpatine",
-    image: `<img src="https://static.wikia.nocookie.net/starwars/images/d/d8/Emperor_Sidious.png/revision/latest?cb=20130620100935" alt="">`,
+    image: `<img src="https://static.wikia.nocookie.net/starwars/images/d/d8/Emperor_Sidious.png" alt="">`,
 },
 {
     name: "Boba Fett",
@@ -89,11 +89,11 @@ const images = [{
 }, 
 {
     name: "Bossk",
-    image: `<img src="https://static.wikia.nocookie.net/esstarwars/images/1/1d/Bossk.png/revision/latest?cb=20160801155607" alt="">`,
+    image: `<img src="https://static.wikia.nocookie.net/esstarwars/images/1/1d/Bossk.png" alt="">`,
 },
 {
     name: "Lando Calrissian",
-    image: `<img src="https://static.wikia.nocookie.net/rustarwars/images/7/7d/Lando_WoSW.jpg/revision/latest?cb=20140413082859" alt="">`,
+    image: `<img src="https://static.wikia.nocookie.net/rustarwars/images/7/7d/Lando_WoSW.jpg" alt="">`,
 },
 {
     name: "Lobot",
@@ -101,11 +101,11 @@ const images = [{
 },
 {
     name: "Ackbar",
-    image: `<img src="https://static.wikia.nocookie.net/rustarwars/images/c/cd/Gial_Ackbar_Resistance.jpg/revision/latest/top-crop/width/360/height/450?cb=20160214133345" alt="">`,
+    image: `<img src="https://static.wikia.nocookie.net/rustarwars/images/c/cd/Gial_Ackbar_Resistance.jpg" alt="">`,
 },
 {
     name: "Mon Mothma",
-    image: `<img src="https://static.wikia.nocookie.net/rustarwars/images/4/46/Monmothma.jpg/revision/latest?cb=20160520030854" alt="">`,
+    image: `<img src="https://static.wikia.nocookie.net/rustarwars/images/4/46/Monmothma.jpg" alt="">`,
 },
 {
     name: "Arvel Crynyd",
@@ -125,11 +125,11 @@ const images = [{
 },
 {
     name: "Anakin Skywalker",
-    image: `<img src="https://static.wikia.nocookie.net/starwars/images/1/11/%D0%90%D0%BD%D0%B0%D0%BA%D0%B8%D0%BD_%D0%A1.jpg/revision/latest?cb=20140831184534&path-prefix=mn" alt="">`,
+    image: `<img src="https://static.wikia.nocookie.net/starwars/images/1/11/%D0%90%D0%BD%D0%B0%D0%BA%D0%B8%D0%BD_%D0%A1.jpg" alt="">`,
 },
 {
     name: "Qui-Gon Jinn",
-    image: `<img src="https://static.wikia.nocookie.net/rustarwars/images/f/f6/Qui-Gon_Jinn_Headshot_TPM.jpg/revision/latest?cb=20180519192129" alt="">`,
+    image: `<img src="https://static.wikia.nocookie.net/rustarwars/images/f/f6/Qui-Gon_Jinn_Headshot_TPM.jpg" alt="">`,
 },
 {
     name: "Nute Gunray",
@@ -141,15 +141,15 @@ const images = [{
 },
 {
     name: "Padmé Amidala",
-    image: `<img src="https://static.wikia.nocookie.net/frstarwars/images/3/3f/Padm%C3%A9_Amidala.jpg/revision/latest?cb=20150701092402" alt="">`,
+    image: `<img src="https://static.wikia.nocookie.net/frstarwars/images/3/3f/Padm%C3%A9_Amidala.jpg" alt="">`,
 },
 {
     name: "Jar Jar Binks",
-    image: `<img src="https://static.wikia.nocookie.net/starwars/images/0/02/Jar_Jar_SWSB.png/revision/latest?cb=20160910034613" alt="">`,
+    image: `<img src="https://static.wikia.nocookie.net/starwars/images/0/02/Jar_Jar_SWSB.png" alt="">`,
 },
 {
     name: "Roos Tarpals",
-    image: `<img src="https://static.wikia.nocookie.net/ptstarwars/images/8/86/Tarpals.jpg/revision/latest?cb=20100108212048" alt="">`,
+    image: `<img src="https://static.wikia.nocookie.net/ptstarwars/images/8/86/Tarpals.jpg" alt="">`,
 },
 {
     name: "Rugor Nass",
@@ -157,27 +157,27 @@ const images = [{
 },
 {
     name: "Watto",
-    image: `<img src="https://static.wikia.nocookie.net/starwars/images/e/eb/WattoHS.jpg/revision/latest?cb=20081222024729" alt="">`,
+    image: `<img src="https://static.wikia.nocookie.net/starwars/images/e/eb/WattoHS.jpg" alt="">`,
 },
 {
     name: "Shmi Skywalker",
-    image: `<img src="https://static.wikia.nocookie.net/rustarwars/images/9/98/ShmiSkywalkerDatabank_%28Repurposed%29.jpg/revision/latest?cb=20171111104112" alt="">`,
+    image: `<img src="https://static.wikia.nocookie.net/rustarwars/images/9/98/ShmiSkywalkerDatabank_%28Repurposed%29.jpg" alt="">`,
 },
 {
     name: "Ayla Secura",
-    image: `<img src="https://static.wikia.nocookie.net/rustarwars/images/4/4d/Aayla_Secura_SWE.png/revision/latest?cb=20140928195056" alt="">`,
+    image: `<img src="https://static.wikia.nocookie.net/rustarwars/images/4/4d/Aayla_Secura_SWE.png" alt="">`,
 },
 {
     name: "Mace Windu",
-    image: `<img src="https://static.wikia.nocookie.net/rustarwars/images/a/a9/MaceKorun.jpg/revision/latest?cb=20080309172908" alt="">`,
+    image: `<img src="https://static.wikia.nocookie.net/rustarwars/images/a/a9/MaceKorun.jpg" alt="">`,
 },
 {
     name: "Ki-Adi-Mundi",
-    image: `<img src="https://static.wikia.nocookie.net/starwars/images/6/6d/KiAdiMundi-SWCT.png/revision/latest?cb=20200807031541" alt="">`,
+    image: `<img src="https://static.wikia.nocookie.net/starwars/images/6/6d/KiAdiMundi-SWCT.png" alt="">`,
 },
 {
     name: "Kit Fisto",
-    image: `<img src="https://static.wikia.nocookie.net/disney/images/3/36/Kit-Fisto_profile.jpg/revision/latest?cb=20191023211616" alt="">`,
+    image: `<img src="https://static.wikia.nocookie.net/disney/images/3/36/Kit-Fisto_profile.jpg" alt="">`,
 }];
     
 

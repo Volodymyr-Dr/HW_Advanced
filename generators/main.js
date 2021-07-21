@@ -9,6 +9,12 @@ console.log(idGenerator.next().value)
 console.log(idGenerator.next().value)
 console.log(idGenerator.next().value)
 
+const couter = document.querySelector('#generator')
+const result = document.querySelector('#result')
+
+couter.addEventListener('click', () => {
+    result.innerHTML = idGenerator.next().value;
+})
 
 function* newFontGenerator(size) {
     
@@ -25,15 +31,31 @@ function* newFontGenerator(size) {
 }
 
 const fontGenerator = newFontGenerator(14);
-console.log(fontGenerator.next('up').value)
-console.log(fontGenerator.next('up').value)
-console.log(fontGenerator.next('up').value)
-console.log(fontGenerator.next().value)
-console.log(fontGenerator.next('down').value)
-console.log(fontGenerator.next('down').value)
-console.log(fontGenerator.next('down').value)
-console.log(fontGenerator.next().value)
 
+const buttonUp = document.querySelector('#up');
+const buttonDown = document.querySelector('#down');
+const text = document.getElementById('text')
+
+
+buttonDown.addEventListener('click', () => {
+    let fontSize = fontGenerator.next('down').value;
+    if (fontSize >= 8) {
+        text.style.fontSize = `${fontSize}px`
+    }else {
+        text.style.fontSize = `${8}px`
+    }
+    
+})
+
+buttonUp.addEventListener('click', () => {
+    let fontSize = fontGenerator.next('up').value;
+    if (fontSize <= 72) {
+        text.style.fontSize = `${fontSize}px`
+    }else {
+        text.style.fontSize = `${72}px`
+    }
+    
+})
 
 
 

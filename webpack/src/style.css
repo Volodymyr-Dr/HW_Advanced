@@ -1,0 +1,14 @@
+@import url('../../server/style.css');
+
+body  {
+    color: rgb(255, 94, 0);
+  }
+
+#planets {
+    display: inline-table;
+    width: 50px;
+}
+
+.hw {
+    color: cadetblue;
+}

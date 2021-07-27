@@ -13,7 +13,7 @@ console.log(`Function from HW 7:`, homeworks.taxes);
 console.log(`Function from HW 8:`, homeworks.infoStudent);
 console.log(`Function from HW 9:`, homeworks.generateRandomColor());
 console.log(`Function from HW 11:`, homeworks.getRandomChinese(3));
-homeworks.getPlanets() // HW 13
+homeworks.getPlanets() //HW 13
 console.log(`Function from HW 14:`)
 console.log(homeworks.idGenerator.next().value)
 console.log(homeworks.idGenerator.next().value)
